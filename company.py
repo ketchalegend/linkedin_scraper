@@ -184,7 +184,7 @@ class Company(Scraper):
 
         driver.get(self.linkedin_url)
 
-        _ = WebDriverWait(driver, 3).until(EC.presence_of_all_elements_located((By.XPATH, '//div[@dir="ltr"]')))
+        _ = WebDriverWait(driver, 3).until(EC.presence_of_all_elements_located((By.CLASS_NAME, "scaffold-layout__main")))
 
         navigation = driver.find_element(By.CLASS_NAME, "org-page-navigation__items ")
 
